@@ -104,6 +104,6 @@ This dataset is the result of research from the University of New Brunswick Cent
 
 
 ## Notes
-- Time-consuming cells in Sprint 2 notebook are encapsulated with triple quotations.
+- Time-consuming cells in cybersec_binary_modelling notebook are encapsulated with triple quotations.
 - Deliberate avoidance of feature selection steps for intuitive inference process.
 
