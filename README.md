@@ -9,6 +9,24 @@ The objective of this project is to develop a model that can reliably predict th
 This dataset is the result of research from the University of New Brunswick Centre for Cybersecurity. It has extracted CSV features on network traffic across 105 Internet of Things (IoT) devices with 33 cyberattacks run on them. 7 types of attacks were run: distributed denial of service (DDoS), denial of service (DoS), reconnaissance, web-based, brute-force, spoofing, and the Mirai botnet.
 [Link to Kaggle](https://www.kaggle.com/datasets/madhavmalhotra/unb-cic-iot-dataset).
 
+## Process Description
+1. Data collection and preprocessing.
+2. Exploratory Data Analysis (EDA).
+3. Experimentation with different pipelines for binary classification.
+4. Cross validation and hyperparameter tuning.
+5. Development of a two-stage model for multiclass classification.
+6. Guidelines for model inference provided in `deployment.py`.
+
+## Directory Structure
+- Notebooks representing three different stages of the project:
+  - `Cybersec_eda.ipynb`
+  - `Cybersec_binary_modelling.ipynb`
+  - `Cybersec_multiclass_modelling.ipynb`
+- `Pipeline_adaboost.zip` contains the binary classification model.
+- `Gridsearch_xgboost.pkl` contains the multiclassification model.
+- `Deployment.py` contains the final inference file.
+
+
 ## Simplified Data Features Overview
 
 ### Communication Patterns
@@ -31,23 +49,6 @@ This dataset is the result of research from the University of New Brunswick Cent
 
 ### Nature of Traffic
 - **Traffic Category**: `label`
-
-## Directory Structure
-- Notebooks representing three different stages of the project:
-  - `Cybersec_eda.ipynb`
-  - `Cybersec_binary_modelling.ipynb`
-  - `Cybersec_multiclass_modelling.ipynb`
-- `Pipeline_adaboost.zip` contains the binary classification model.
-- `Gridsearch_xgboost.pkl` contains the multiclassification model.
-- `Deployment.py` contains the final inference file.
-
-## Process Description
-1. Data collection and preprocessing.
-2. Exploratory Data Analysis (EDA).
-3. Experimentation with different pipelines for binary classification.
-4. Cross validation and hyperparameter tuning.
-5. Development of a two-stage model for multiclass classification.
-6. Guidelines for model inference provided in `deployment.py`.
 
 
 ## Feature Descriptions
@@ -99,8 +100,8 @@ This dataset is the result of research from the University of New Brunswick Cent
 | `Radius`          | float64   | A derived metric indicating the radius of the flow.          |
 | `Covariance`      | float64   | The covariance of packet sizes in the flow.                  |
 | `Variance`        | float64   | The variance of packet sizes in the flow.                    |
-| `Weight`          | float64   | A weight metric related to the flow.                         |
-| `label`           | object    | Number of incoming packets × Number of outgoing packets                      |
+| `Weight`          | float64   | Number of incoming packets × Number of outgoing packets                         |
+| `label`           | object    | The labeled nature of traffic: Benign or a type of recon cyberattack.                      |
 
 
 ## Notes
